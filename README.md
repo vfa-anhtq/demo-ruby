@@ -1,6 +1,6 @@
 # Rails Template
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/0060966b181b26405c22/maintainability)](https://codeclimate.com/github/TristanToye/rails-template/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/89fc762ec583cc1b84cd/test_coverage)](https://codeclimate.com/github/TristanToye/rails-template/test_coverage) [![CircleCI](https://circleci.com/gh/TristanToye/rails-template.svg?style=svg)](https://circleci.com/gh/TristanToye/rails-template) ![License](https://img.shields.io/github/license/tristantoye/rails-template.svg?style=flat) [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/TristanToye/rails-template/blob/master/LICENSE) ![Issues](https://img.shields.io/github/issues-raw/tristantoye/rails-template.svg?style=flat) ![Monitoring](https://img.shields.io/uptimerobot/status/m781943983-80d12cbd488c39a365d85a41.svg?style=flat) ![Uptime](https://img.shields.io/uptimerobot/ratio/m781943983-80d12cbd488c39a365d85a41.svg?style=flat)
+[![Maintainability](https://api.codeclimate.com/v1/badges/89fc762ec583cc1b84cd/maintainability)](https://codeclimate.com/github/TristanToye/rails-template/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/89fc762ec583cc1b84cd/test_coverage)](https://codeclimate.com/github/TristanToye/rails-template/test_coverage) [![CircleCI](https://circleci.com/gh/TristanToye/rails-template.svg?style=svg)](https://circleci.com/gh/TristanToye/rails-template) ![License](https://img.shields.io/github/license/tristantoye/rails-template.svg?style=flat) [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/TristanToye/rails-template/blob/master/LICENSE) ![Issues](https://img.shields.io/github/issues-raw/tristantoye/rails-template.svg?style=flat) ![Monitoring](https://img.shields.io/uptimerobot/status/m781943983-80d12cbd488c39a365d85a41.svg?style=flat) ![Uptime](https://img.shields.io/uptimerobot/ratio/m781943983-80d12cbd488c39a365d85a41.svg?style=flat)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TristanToye/rails-template) [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/?repository=https://github.com/TristanToye/rails-template)
 
 A MVP ready template for Rails apps.
@@ -10,9 +10,9 @@ Everything used in this repo is open source, free, or optional.
 This repo focuses on getting your project setup ASAP with all the tooling to start deploying from your first commit.
 
 ## ⬆️ Versions
-- [Live Demo (master branch)](http://demo.railstemplate.com)
-- [Rails 6.x](https://github.com/TristanToye/rails-template/)
-- [Rails 5.x](https://github.com/TristanToye/rails-template/tree/v1.1)
+- [Live Demo (master branch)](https://demo.railstemplate.com)
+- Rails 6.x Coming Soon
+- [Rails 5.x](https://github.com/TristanToye/rails-template)
 - [Rails 4.x](https://github.com/TristanToye/rails-4-boilerplate)
 
 ## ✨ Features
@@ -48,18 +48,15 @@ cd rails-template
 
 ## 🔧 Local Setup
 Next you need to install all the dependiencies:
-- ruby 2.7.0
-- rails 6
-- node 8.16.0
-- postgres 10
+- ruby 2.6.5
+- rails 5.2
+- postgres
 
 To accomplish this I recommend the following:
 - install homebrew
 - install RVM
-- install ruby 2.7.0 with RVM
-- install rails 6
-- install NVM
-- install node 8.16.0 with NVM
+- install ruby 2.6.5 with RVM
+- install rails 5.2
 - install postgres 10
 
 This guide walks you through it in details: http://railsapps.github.io/installrubyonrails-mac.html
@@ -80,13 +77,13 @@ $ bundle install
 ```
 
 ### 🔒 Setup Secrets
-For most credentials we want to use the Rails 5.2 credential management. This article explains it well with examples: https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336
+For most credentials we want to use the new Rails 5.2 credential management. This article explains it well with examples: https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336
 
 To get started here go delete my credentials located at `/config/credentials.yml.enc`.
 
 We will start by adding a `secret_key_base` to this file:
 ```
-$ rake secret
+$ rake secrect
 840f20e6084666b7aabe9d94...
 $ EDITOR="code --wait" rails credentials:edit
 
@@ -230,7 +227,7 @@ Sign in with github & connect your repo.
 
 Add this environment variable to CirclCi: `CC_TEST_REPORTER_ID`
 
-I highly recommend installing the browser extension: https://chrome.google.com/webstore/detail/code-climate/phgahogocbnfilkegjdpohgkkjgahjgk
+I highly recommend installing the browser extension as we: https://chrome.google.com/webstore/detail/code-climate/phgahogocbnfilkegjdpohgkkjgahjgk
 
 ## ✉️ Mailer Setup
 
